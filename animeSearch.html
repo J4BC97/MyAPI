@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap"
+            rel="stylesheet"
+        />
+    <title>API - PokeAPI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1, .header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15;
+        }
+        .dataAlbum {
+            margin-top: 20px;
+        }
+        .pagination {
+            justify-content: center; /* Centra la paginación horizontalmente */
+            margin-top: 10px;
+        }
+        .btn {
+            font-size: 1rem; /* Asegura que el texto en los botones sea visible */
+            color: #ffffff; /* Asegura que el texto en los botones sea blanco */
+            background-color: #007bff; /* Color de fondo para los botones */
+            border: none; /* Elimina el borde por defecto */
+        }
+        .btn:hover {
+            background-color: #0056b3; /* Color de fondo en hover */
+        }
+
+        input#searchBar {
+            margin: 0; /* Quitar margen extra */
+            padding: 10px; /* Mejorar espaciado interno */
+            width: 100%; /* Asegurar ancho completo */
+            box-sizing: border-box; /* Evitar desbordamiento */
+        }
+
+        .mb-4 {
+            margin-bottom: 10px; /* Reducir margen inferior */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <header class="text-center">
+            <h1>Jikan API por Jason</h1>
+            <h2>Consumir API de Jikan</h2>
+            <div class="container mt-5">
+                <div class="mb-4">
+                    <input
+                        type="text"
+                        id="searchBar"
+                        class="form-control"
+                        placeholder="Buscar un anime..."
+                    />
+                    <button class="btn mt-2" onclick="searchAnime()">Buscar</button>
+                </div>
+                <div id="dataAlbum" class="dataAlbum row row-cols-1 row-cols-md-5 g-4"></div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <div
+            id="dataAlbum"
+            class="dataAlbum row row-cols-1 row-cols-md-5 g-4"
+        ></div>
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./js/animeSearch.js"></script>
+</body>
+</html>
